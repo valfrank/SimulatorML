@@ -20,7 +20,7 @@ offer_clicks = 0
 @app.on_event("startup")
 def startup_event():
     """
-    A function that run before the application starts and clear dicts
+    A function that runs before the application starts and clears dicts
     """
     recom.clear()
     click_offer.clear()
@@ -32,7 +32,7 @@ def startup_event():
 @app.put("/feedback/")
 def feedback(click_id: int, reward: float) -> dict:
     """
-    Get feedback for particular click
+    Get feedback for a particular click
     """
     # Response body consists of click ID
     # and accepted click status (True/False)
@@ -116,7 +116,6 @@ def sample(click_id: int, offer_ids: str) -> dict:
         "offer_id": offer_id,
         "sampler": sampler,
     }
-
     return response
 
 
